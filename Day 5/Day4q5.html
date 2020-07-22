@@ -1,0 +1,21 @@
+<html>
+<head>
+    <script type=text/javascript>
+        
+        var reward=0;
+        var sales=prompt("enter the sales of the employee");
+        if(sales==0 && sales<=5000)
+            reward=(2*sales)/100
+        else if(sales>=5001 && sales<=10000)
+            reward=(5*sales)/100
+        else if(sales>=10001 && sales<=20000)
+            reward=(7*sales)/100
+        else if(sales>20000)
+            reward=(10*sales)/100
+        document.write("Your commission is :"+reward)
+        
+    
+    </script>
+    </head>
+    <body></body>
+</html>
