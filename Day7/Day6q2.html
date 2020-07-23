@@ -1,0 +1,45 @@
+<!--
+Write a program that will display the multiplication table of a number on the webpage in a proper
+format. Take the input from the user.
+Input - 5
+Output - 5 x 1 = 5
+ 5 x 2 = 10
+ and so on…
+
+-->
+<html>
+
+<body>
+<table border="0" style="margin: 0 auto; width:500px">
+    <tr>
+        <td colspan="2"><h2>Print Multiplication Table </h2></td>
+    </tr>
+ 
+    <tr>
+        <td width="28%">Enter a Number : </td>
+        <td><input type="number" onchange="printTable(this)"></td>
+    </tr>
+    <tr>
+        <td colspan="2"><span id="mul"></span></td>
+    </tr>
+</table>
+ 
+<script>
+function printTable(num) {
+    var input = num.value;
+    if(!isNaN(input)) {
+        var table="";
+        var number="";
+        for(i=1;i<=10;i++) {
+            number = input * i;
+            table +=  input + " * " + i + " = " + number + "<br/>";
+        }
+        document.getElementById("mul").innerHTML = table;
+    }
+    else {
+        document.getElementById("mul").innerHTML = "Please Enter a valid Number";
+    }
+}
+</script>
+</body>
+</html>      
